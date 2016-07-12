@@ -1,4 +1,17 @@
 ---
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Define php_uploadprogress_module_path.
+  set_fact:
+    php_uploadprogress_module_path: "{{ __php_uploadprogress_module_path }}"
+  when: php_uploadprogress_module_path is not defined
+
+- name: Define php_uploadprogress_config_filename.
+  set_fact:
+    php_uploadprogress_config_filename: "{{ __php_uploadprogress_config_filename }}"
+  when: php_uploadprogress_config_filename is not defined
+
 - name: Download and untar uploadprogress.
   unarchive:
     src: "https://github.com/php/pecl-php-uploadprogress/archive/master.tar.gz"
