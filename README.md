@@ -1,6 +1,6 @@
 # Ansible Role: Upload progress
 
-[![CircleCI](https://circleci.com/gh/beetboxvm/ansible-role-beetbox-upload-progress.svg?style=svg)](https://circleci.com/gh/beetboxvm/ansible-role-beetbox-upload-progress)
+[![Build Status](https://travis-ci.org/thom8/ansible-role-php-upload-progress.svg?branch=master)](https://travis-ci.org/thom8/ansible-role-php-upload-progress)
 
 Installs Upload progress PHP extension on Linux servers.
 
